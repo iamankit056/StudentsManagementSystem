@@ -8,5 +8,12 @@ namespace StudentsManagementSystem.Scripts
 {
     internal class Student
     {
+        public string name;
+        public int rollNumber;
+        public string department;
+        public string email;
+        public string password;
+
+        public static List<Student> students;
     }
 }
