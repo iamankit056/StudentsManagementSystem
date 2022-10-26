@@ -35,7 +35,7 @@
             this.NewRegistrationBtn = new System.Windows.Forms.Button();
             this.EditBtn = new System.Windows.Forms.Button();
             this.DeleteBtn = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.LogOutBtn = new System.Windows.Forms.Button();
             this.mySqlConnection1 = new MySql.Data.MySqlClient.MySqlConnection();
             this.RollNumberCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -102,6 +102,7 @@
             this.NewRegistrationBtn.TabIndex = 6;
             this.NewRegistrationBtn.Text = "New Registration";
             this.NewRegistrationBtn.UseVisualStyleBackColor = true;
+            this.NewRegistrationBtn.Click += new System.EventHandler(this.NewRegistrationBtn_Click);
             // 
             // EditBtn
             // 
@@ -113,6 +114,7 @@
             this.EditBtn.TabIndex = 7;
             this.EditBtn.Text = "Edit";
             this.EditBtn.UseVisualStyleBackColor = true;
+            this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
             // 
             // DeleteBtn
             // 
@@ -124,17 +126,19 @@
             this.DeleteBtn.TabIndex = 8;
             this.DeleteBtn.Text = "Delete";
             this.DeleteBtn.UseVisualStyleBackColor = true;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
-            // button3
+            // LogOutBtn
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(658, 408);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 35);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Log Out";
-            this.button3.UseVisualStyleBackColor = true;
+            this.LogOutBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.LogOutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogOutBtn.Location = new System.Drawing.Point(658, 408);
+            this.LogOutBtn.Name = "LogOutBtn";
+            this.LogOutBtn.Size = new System.Drawing.Size(130, 35);
+            this.LogOutBtn.TabIndex = 9;
+            this.LogOutBtn.Text = "Log Out";
+            this.LogOutBtn.UseVisualStyleBackColor = true;
+            this.LogOutBtn.Click += new System.EventHandler(this.LogOutBtn_Click);
             // 
             // RollNumberCol
             // 
@@ -171,7 +175,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.LogOutBtn);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.EditBtn);
             this.Controls.Add(this.NewRegistrationBtn);
@@ -195,7 +199,7 @@
         private System.Windows.Forms.Button NewRegistrationBtn;
         private System.Windows.Forms.Button EditBtn;
         private System.Windows.Forms.Button DeleteBtn;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button LogOutBtn;
         private MySql.Data.MySqlClient.MySqlConnection mySqlConnection1;
         private System.Windows.Forms.DataGridViewTextBoxColumn RollNumberCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameCol;

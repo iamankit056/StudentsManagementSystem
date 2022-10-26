@@ -16,5 +16,25 @@ namespace StudentsManagementSystem.Forms
         {
             InitializeComponent();
         }
+
+        private void NewRegistrationBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LogOutBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
