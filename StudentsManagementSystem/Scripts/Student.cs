@@ -13,7 +13,5 @@ namespace StudentsManagementSystem.Scripts
         public string department;
         public string email;
         public string password;
-
-        public static List<Student> students;
     }
 }

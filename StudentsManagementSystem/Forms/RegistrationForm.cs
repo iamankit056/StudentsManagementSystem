@@ -1,4 +1,5 @@
-﻿using StudentsManagementSystem.Scripts;
+﻿using MySql.Data.MySqlClient;
+using StudentsManagementSystem.Scripts;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,12 @@ namespace StudentsManagementSystem.Forms
 {
     public partial class RegistrationForm : Form
     {
-        public RegistrationForm()
+        private DataGridView studentsDataGridView;
+
+        public RegistrationForm(DataGridView studentsDataGridView)
         {
             InitializeComponent();
+            this.studentsDataGridView = studentsDataGridView;
         }
 
         private void RegisterBtn_Click(object sender, EventArgs e)
@@ -26,6 +30,7 @@ namespace StudentsManagementSystem.Forms
             student.password = PasswordTxt.Text;
             student.department = DepartmentCBox.SelectedItem.ToString();
             student.rollNumber = Convert.ToInt32(RollNumberTxt.Text);
+
 
         }
     }

@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.StudentsDGrid = new System.Windows.Forms.DataGridView();
-            this.RollNumberCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DepartmentCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmailCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PasswordCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IndexTitleLabel = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,56 +43,12 @@
             // 
             this.StudentsDGrid.AllowUserToAddRows = false;
             this.StudentsDGrid.AllowUserToDeleteRows = false;
-            this.StudentsDGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.StudentsDGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentsDGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.RollNumberCol,
-            this.NameCol,
-            this.DepartmentCol,
-            this.EmailCol,
-            this.PasswordCol});
             this.StudentsDGrid.Location = new System.Drawing.Point(12, 57);
             this.StudentsDGrid.Name = "StudentsDGrid";
             this.StudentsDGrid.ReadOnly = true;
             this.StudentsDGrid.Size = new System.Drawing.Size(776, 345);
             this.StudentsDGrid.TabIndex = 1;
-            // 
-            // RollNumberCol
-            // 
-            this.RollNumberCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.RollNumberCol.HeaderText = "Roll Number";
-            this.RollNumberCol.Name = "RollNumberCol";
-            this.RollNumberCol.ReadOnly = true;
-            // 
-            // NameCol
-            // 
-            this.NameCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NameCol.HeaderText = "Name";
-            this.NameCol.Name = "NameCol";
-            this.NameCol.ReadOnly = true;
-            // 
-            // DepartmentCol
-            // 
-            this.DepartmentCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DepartmentCol.HeaderText = "Department";
-            this.DepartmentCol.Name = "DepartmentCol";
-            this.DepartmentCol.ReadOnly = true;
-            // 
-            // EmailCol
-            // 
-            this.EmailCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.EmailCol.HeaderText = "Email";
-            this.EmailCol.Name = "EmailCol";
-            this.EmailCol.ReadOnly = true;
-            // 
-            // PasswordCol
-            // 
-            this.PasswordCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PasswordCol.HeaderText = "Password";
-            this.PasswordCol.Name = "PasswordCol";
-            this.PasswordCol.ReadOnly = true;
             // 
             // IndexTitleLabel
             // 
@@ -192,6 +143,7 @@
             this.Controls.Add(this.StudentsDGrid);
             this.Name = "IndexForm";
             this.Text = "IndexForm";
+            this.Load += new System.EventHandler(this.IndexForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StudentsDGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -207,10 +159,5 @@
         private System.Windows.Forms.Button EditBtn;
         private System.Windows.Forms.Button DeleteBtn;
         private System.Windows.Forms.Button LogOutBtn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RollNumberCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NameCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DepartmentCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmailCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PasswordCol;
     }
 }

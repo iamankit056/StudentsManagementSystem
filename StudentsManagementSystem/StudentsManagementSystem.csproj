@@ -99,6 +99,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scripts\Student.cs" />
+    <Compile Include="Scripts\StudentsCRUD.cs" />
     <EmbeddedResource Include="Forms\IndexForm.resx">
       <DependentUpon>IndexForm.cs</DependentUpon>
     </EmbeddedResource>
