@@ -24,7 +24,7 @@ namespace StudentsManagementSystem.Forms
             student.name = NameTxt.Text;
             student.email = EmailTxt.Text;
             student.password = PasswordTxt.Text;
-            student.department = DepartmentCBox.Items.ToString();
+            student.department = DepartmentCBox.SelectedItem.ToString();
             student.rollNumber = Convert.ToInt32(RollNumberTxt.Text);
 
         }

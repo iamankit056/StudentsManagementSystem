@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.StudentsDGrid = new System.Windows.Forms.DataGridView();
+            this.RollNumberCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DepartmentCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmailCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PasswordCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IndexTitleLabel = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,16 +42,13 @@
             this.DeleteBtn = new System.Windows.Forms.Button();
             this.LogOutBtn = new System.Windows.Forms.Button();
             this.mySqlConnection1 = new MySql.Data.MySqlClient.MySqlConnection();
-            this.RollNumberCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DepartmentCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmailCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PasswordCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.StudentsDGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // StudentsDGrid
             // 
+            this.StudentsDGrid.AllowUserToAddRows = false;
+            this.StudentsDGrid.AllowUserToDeleteRows = false;
             this.StudentsDGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -59,8 +61,44 @@
             this.PasswordCol});
             this.StudentsDGrid.Location = new System.Drawing.Point(12, 57);
             this.StudentsDGrid.Name = "StudentsDGrid";
+            this.StudentsDGrid.ReadOnly = true;
             this.StudentsDGrid.Size = new System.Drawing.Size(776, 345);
             this.StudentsDGrid.TabIndex = 1;
+            // 
+            // RollNumberCol
+            // 
+            this.RollNumberCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.RollNumberCol.HeaderText = "Roll Number";
+            this.RollNumberCol.Name = "RollNumberCol";
+            this.RollNumberCol.ReadOnly = true;
+            // 
+            // NameCol
+            // 
+            this.NameCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameCol.HeaderText = "Name";
+            this.NameCol.Name = "NameCol";
+            this.NameCol.ReadOnly = true;
+            // 
+            // DepartmentCol
+            // 
+            this.DepartmentCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DepartmentCol.HeaderText = "Department";
+            this.DepartmentCol.Name = "DepartmentCol";
+            this.DepartmentCol.ReadOnly = true;
+            // 
+            // EmailCol
+            // 
+            this.EmailCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.EmailCol.HeaderText = "Email";
+            this.EmailCol.Name = "EmailCol";
+            this.EmailCol.ReadOnly = true;
+            // 
+            // PasswordCol
+            // 
+            this.PasswordCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PasswordCol.HeaderText = "Password";
+            this.PasswordCol.Name = "PasswordCol";
+            this.PasswordCol.ReadOnly = true;
             // 
             // IndexTitleLabel
             // 
@@ -139,36 +177,6 @@
             this.LogOutBtn.Text = "Log Out";
             this.LogOutBtn.UseVisualStyleBackColor = true;
             this.LogOutBtn.Click += new System.EventHandler(this.LogOutBtn_Click);
-            // 
-            // RollNumberCol
-            // 
-            this.RollNumberCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.RollNumberCol.HeaderText = "Roll Number";
-            this.RollNumberCol.Name = "RollNumberCol";
-            // 
-            // NameCol
-            // 
-            this.NameCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NameCol.HeaderText = "Name";
-            this.NameCol.Name = "NameCol";
-            // 
-            // DepartmentCol
-            // 
-            this.DepartmentCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DepartmentCol.HeaderText = "Department";
-            this.DepartmentCol.Name = "DepartmentCol";
-            // 
-            // EmailCol
-            // 
-            this.EmailCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.EmailCol.HeaderText = "Email";
-            this.EmailCol.Name = "EmailCol";
-            // 
-            // PasswordCol
-            // 
-            this.PasswordCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PasswordCol.HeaderText = "Password";
-            this.PasswordCol.Name = "PasswordCol";
             // 
             // IndexForm
             // 

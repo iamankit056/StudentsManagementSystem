@@ -19,7 +19,7 @@ namespace StudentsManagementSystem.Forms
 
         private void NewRegistrationBtn_Click(object sender, EventArgs e)
         {
-
+            new RegistrationForm().ShowDialog();
         }
 
         private void EditBtn_Click(object sender, EventArgs e)
