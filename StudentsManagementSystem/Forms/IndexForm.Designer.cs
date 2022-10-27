@@ -41,7 +41,6 @@
             this.EditBtn = new System.Windows.Forms.Button();
             this.DeleteBtn = new System.Windows.Forms.Button();
             this.LogOutBtn = new System.Windows.Forms.Button();
-            this.mySqlConnection1 = new MySql.Data.MySqlClient.MySqlConnection();
             ((System.ComponentModel.ISupportInitialize)(this.StudentsDGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -208,7 +207,6 @@
         private System.Windows.Forms.Button EditBtn;
         private System.Windows.Forms.Button DeleteBtn;
         private System.Windows.Forms.Button LogOutBtn;
-        private MySql.Data.MySqlClient.MySqlConnection mySqlConnection1;
         private System.Windows.Forms.DataGridViewTextBoxColumn RollNumberCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn DepartmentCol;
