@@ -15,11 +15,13 @@ namespace StudentsManagementSystem.Forms
     public partial class RegistrationForm : Form
     {
         private DataGridView studentsDataGridView;
+        private StudentsCRUD studentsCRUD;
 
         public RegistrationForm(DataGridView studentsDataGridView)
         {
             InitializeComponent();
             this.studentsDataGridView = studentsDataGridView;
+            this.studentsCRUD = new StudentsCRUD();
         }
 
         private void RegisterBtn_Click(object sender, EventArgs e)
@@ -31,7 +33,7 @@ namespace StudentsManagementSystem.Forms
             student.department = DepartmentCBox.SelectedItem.ToString();
             student.rollNumber = Convert.ToInt32(RollNumberTxt.Text);
 
-
+            studentsDataGridView.DataSource = studentsCRUD.InsertRecord(student);
         }
     }
 }

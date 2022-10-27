@@ -42,7 +42,9 @@
             // StudentsDGrid
             // 
             this.StudentsDGrid.AllowUserToAddRows = false;
-            this.StudentsDGrid.AllowUserToDeleteRows = false;
+            this.StudentsDGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.StudentsDGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.StudentsDGrid.Location = new System.Drawing.Point(12, 57);
             this.StudentsDGrid.Name = "StudentsDGrid";

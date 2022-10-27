@@ -44,5 +44,37 @@ namespace StudentsManagementSystem.Scripts
                 conn.Close();
             }
         }
+        
+        public DataTable InsertRecord(Student student)
+        {
+            try
+            {
+                conn.Open();
+                string mySqlQuery = "select * from Students";
+                MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(mySqlQuery, conn);
+                MySqlCommandBuilder mySqlCommandBuilder = new MySqlCommandBuilder(mySqlDataAdapter);
+                DataSet ds = new DataSet();
+                mySqlDataAdapter.Fill(ds, "Students");
+                DataRow row = ds.Tables["Students"].NewRow();
+                row["RollNumber"] = student.rollNumber;
+                row["Name"] = student.name;
+                row["Department"] = student.department;
+                row["Email"] = student.email;
+                row["Password"] = student.password;
+                ds.Tables["Students"].Rows.Add(row);
+                mySqlDataAdapter.Update(ds, "Students");
+                return ds.Tables["Students"];
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            finally
+            {
+                conn.Close();
+                MessageBox.Show("Record Register Sucessesfully...");
+            }
+        }
     }
 }

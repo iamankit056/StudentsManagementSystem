@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,6 +24,7 @@ namespace StudentsManagementSystem.Forms
 
         private void IndexForm_Load(object sender, EventArgs e)
         {
+            StudentsDGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             StudentsDGrid.DataSource = studentsCRUD.Read();
         }
 
