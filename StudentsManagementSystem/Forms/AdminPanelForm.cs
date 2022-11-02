@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace StudentsManagementSystem.Forms
 {
-    public partial class AdminLoginForm : Form
+    public partial class AdminPanelForm : Form
     {
-        public AdminLoginForm()
+        public AdminPanelForm()
         {
             InitializeComponent();
-        }
-
-        private void submitBtn_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

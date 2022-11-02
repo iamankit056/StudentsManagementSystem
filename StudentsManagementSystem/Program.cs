@@ -17,7 +17,7 @@ namespace StudentsManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminLoginForm());
+            Application.Run(new AdminPanelForm());
         }
     }
 }
