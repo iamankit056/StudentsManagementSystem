@@ -35,6 +35,7 @@
             this.passwordTxt = new System.Windows.Forms.TextBox();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.submitBtn = new System.Windows.Forms.Button();
+            this.loginValidationMessageLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -106,11 +107,22 @@
             this.submitBtn.UseVisualStyleBackColor = true;
             this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
+            // loginValidationMessageLabel
+            // 
+            this.loginValidationMessageLabel.AutoSize = true;
+            this.loginValidationMessageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginValidationMessageLabel.ForeColor = System.Drawing.Color.Red;
+            this.loginValidationMessageLabel.Location = new System.Drawing.Point(97, 273);
+            this.loginValidationMessageLabel.Name = "loginValidationMessageLabel";
+            this.loginValidationMessageLabel.Size = new System.Drawing.Size(0, 16);
+            this.loginValidationMessageLabel.TabIndex = 7;
+            // 
             // AdminLoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.loginValidationMessageLabel);
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.passwordTxt);
@@ -139,5 +151,6 @@
         private System.Windows.Forms.TextBox passwordTxt;
         private System.Windows.Forms.Button cancelBtn;
         private System.Windows.Forms.Button submitBtn;
+        private System.Windows.Forms.Label loginValidationMessageLabel;
     }
 }
