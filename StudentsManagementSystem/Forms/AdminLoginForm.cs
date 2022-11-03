@@ -19,7 +19,15 @@ namespace StudentsManagementSystem.Forms
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            AdminPanelForm adminPanelForm = new AdminPanelForm();
+            adminPanelForm.ShowDialog();
+            this.Close();
+        }
 
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
