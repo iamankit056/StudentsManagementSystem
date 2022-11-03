@@ -185,6 +185,7 @@
             this.Name = "AdminPanelForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Panel";
+            this.Load += new System.EventHandler(this.AdminPanelForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.studentsDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
