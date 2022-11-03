@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace StudentsManagementSystem.Forms
 {
     public partial class StudentRegistrationForm : Form
     {
-        public StudentRegistrationForm()
+        MySqlConnection mySqlConnection;
+
+        public StudentRegistrationForm(MySqlConnection mySqlConnection)
         {
             InitializeComponent();
+            this.mySqlConnection = mySqlConnection;
         }
 
         private void submitBtn_Click(object sender, EventArgs e)
@@ -22,7 +26,35 @@ namespace StudentsManagementSystem.Forms
             bool isErrorOccure = Validation();
             if (!isErrorOccure)
             {
-                MessageBox.Show("Registration sucessesfull...");
+                try
+                {
+                    mySqlConnection.Open();
+                    string query = "select * from Students";
+                    MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(query, mySqlConnection);
+                    MySqlCommandBuilder mySqlCommandBuilder = new MySqlCommandBuilder(mySqlDataAdapter);
+                    DataSet ds = new DataSet();
+                    mySqlDataAdapter.Fill(ds, "Students");
+                    DataRow row = ds.Tables["Students"].NewRow();
+
+                    row["Name"] = nameTxt.Text;
+                    row["Email"] = emailTxt.Text;
+                    row["Password"] = passwordTxt.Text;
+                    row["RollNumber"] = Convert.ToInt32(rollNumberTxt.Text);
+                    row["Department"] = departmentCBox.SelectedItem;
+
+                    ds.Tables["Students"].Rows.Add(row);
+                    mySqlDataAdapter.Update(ds, "Students");
+                    MessageBox.Show("Record inserted sucessesfully");
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    mySqlConnection.Close();
+                }
             }
         }
 

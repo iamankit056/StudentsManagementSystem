@@ -74,7 +74,7 @@
             this.emailTxt.Location = new System.Drawing.Point(100, 158);
             this.emailTxt.Name = "emailTxt";
             this.emailTxt.Size = new System.Drawing.Size(600, 26);
-            this.emailTxt.TabIndex = 3;
+            this.emailTxt.TabIndex = 1;
             // 
             // passwordTxt
             // 
@@ -83,7 +83,7 @@
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.PasswordChar = '*';
             this.passwordTxt.Size = new System.Drawing.Size(600, 26);
-            this.passwordTxt.TabIndex = 4;
+            this.passwordTxt.TabIndex = 2;
             // 
             // cancelBtn
             // 
@@ -91,7 +91,7 @@
             this.cancelBtn.Location = new System.Drawing.Point(494, 300);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(100, 30);
-            this.cancelBtn.TabIndex = 5;
+            this.cancelBtn.TabIndex = 3;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = true;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
@@ -102,7 +102,7 @@
             this.submitBtn.Location = new System.Drawing.Point(600, 300);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(100, 30);
-            this.submitBtn.TabIndex = 6;
+            this.submitBtn.TabIndex = 4;
             this.submitBtn.Text = "Sign in";
             this.submitBtn.UseVisualStyleBackColor = true;
             this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);

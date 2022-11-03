@@ -48,7 +48,7 @@ namespace StudentsManagementSystem.Forms
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            StudentRegistrationForm studentRegistrationForm = new StudentRegistrationForm();
+            StudentRegistrationForm studentRegistrationForm = new StudentRegistrationForm(mySqlConnection);
             studentRegistrationForm.ShowDialog();
         }
 

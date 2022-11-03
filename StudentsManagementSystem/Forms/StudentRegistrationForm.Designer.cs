@@ -30,6 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.conformPasswordValidationLabel = new System.Windows.Forms.Label();
+            this.passwordValidationLabel = new System.Windows.Forms.Label();
+            this.emailValidationLabel = new System.Windows.Forms.Label();
+            this.departmentValidationLabel = new System.Windows.Forms.Label();
+            this.rollNumberValidationLabel = new System.Windows.Forms.Label();
+            this.nameValidationLabel = new System.Windows.Forms.Label();
             this.resetBtn = new System.Windows.Forms.Button();
             this.submitBtn = new System.Windows.Forms.Button();
             this.departmentCBox = new System.Windows.Forms.ComboBox();
@@ -44,12 +50,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.nameValidationLabel = new System.Windows.Forms.Label();
-            this.rollNumberValidationLabel = new System.Windows.Forms.Label();
-            this.departmentValidationLabel = new System.Windows.Forms.Label();
-            this.emailValidationLabel = new System.Windows.Forms.Label();
-            this.passwordValidationLabel = new System.Windows.Forms.Label();
-            this.conformPasswordValidationLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,13 +95,85 @@
             this.panel1.Size = new System.Drawing.Size(550, 500);
             this.panel1.TabIndex = 1;
             // 
+            // conformPasswordValidationLabel
+            // 
+            this.conformPasswordValidationLabel.AutoSize = true;
+            this.conformPasswordValidationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conformPasswordValidationLabel.ForeColor = System.Drawing.Color.Red;
+            this.conformPasswordValidationLabel.Location = new System.Drawing.Point(64, 605);
+            this.conformPasswordValidationLabel.Name = "conformPasswordValidationLabel";
+            this.conformPasswordValidationLabel.Size = new System.Drawing.Size(153, 16);
+            this.conformPasswordValidationLabel.TabIndex = 19;
+            this.conformPasswordValidationLabel.Text = "Password doesn\'t match";
+            this.conformPasswordValidationLabel.Visible = false;
+            // 
+            // passwordValidationLabel
+            // 
+            this.passwordValidationLabel.AutoSize = true;
+            this.passwordValidationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordValidationLabel.ForeColor = System.Drawing.Color.Red;
+            this.passwordValidationLabel.Location = new System.Drawing.Point(64, 508);
+            this.passwordValidationLabel.Name = "passwordValidationLabel";
+            this.passwordValidationLabel.Size = new System.Drawing.Size(191, 16);
+            this.passwordValidationLabel.TabIndex = 18;
+            this.passwordValidationLabel.Text = "Password must 5 - 20 character";
+            this.passwordValidationLabel.Visible = false;
+            // 
+            // emailValidationLabel
+            // 
+            this.emailValidationLabel.AutoSize = true;
+            this.emailValidationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailValidationLabel.ForeColor = System.Drawing.Color.Red;
+            this.emailValidationLabel.Location = new System.Drawing.Point(64, 408);
+            this.emailValidationLabel.Name = "emailValidationLabel";
+            this.emailValidationLabel.Size = new System.Drawing.Size(128, 16);
+            this.emailValidationLabel.TabIndex = 17;
+            this.emailValidationLabel.Text = "Email doesn\'t empty";
+            this.emailValidationLabel.Visible = false;
+            // 
+            // departmentValidationLabel
+            // 
+            this.departmentValidationLabel.AutoSize = true;
+            this.departmentValidationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.departmentValidationLabel.ForeColor = System.Drawing.Color.Red;
+            this.departmentValidationLabel.Location = new System.Drawing.Point(64, 324);
+            this.departmentValidationLabel.Name = "departmentValidationLabel";
+            this.departmentValidationLabel.Size = new System.Drawing.Size(327, 16);
+            this.departmentValidationLabel.TabIndex = 16;
+            this.departmentValidationLabel.Text = "Please Select Department. Department doesn\'t empty";
+            this.departmentValidationLabel.Visible = false;
+            // 
+            // rollNumberValidationLabel
+            // 
+            this.rollNumberValidationLabel.AutoSize = true;
+            this.rollNumberValidationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rollNumberValidationLabel.ForeColor = System.Drawing.Color.Red;
+            this.rollNumberValidationLabel.Location = new System.Drawing.Point(64, 234);
+            this.rollNumberValidationLabel.Name = "rollNumberValidationLabel";
+            this.rollNumberValidationLabel.Size = new System.Drawing.Size(169, 16);
+            this.rollNumberValidationLabel.TabIndex = 15;
+            this.rollNumberValidationLabel.Text = "Roll Number doesn\'t empty";
+            this.rollNumberValidationLabel.Visible = false;
+            // 
+            // nameValidationLabel
+            // 
+            this.nameValidationLabel.AutoSize = true;
+            this.nameValidationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameValidationLabel.ForeColor = System.Drawing.Color.Red;
+            this.nameValidationLabel.Location = new System.Drawing.Point(64, 139);
+            this.nameValidationLabel.Name = "nameValidationLabel";
+            this.nameValidationLabel.Size = new System.Drawing.Size(131, 16);
+            this.nameValidationLabel.TabIndex = 14;
+            this.nameValidationLabel.Text = "Name doesn\'t empty";
+            this.nameValidationLabel.Visible = false;
+            // 
             // resetBtn
             // 
             this.resetBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resetBtn.Location = new System.Drawing.Point(260, 669);
             this.resetBtn.Name = "resetBtn";
             this.resetBtn.Size = new System.Drawing.Size(100, 30);
-            this.resetBtn.TabIndex = 13;
+            this.resetBtn.TabIndex = 7;
             this.resetBtn.Text = "Reset";
             this.resetBtn.UseVisualStyleBackColor = true;
             this.resetBtn.Click += new System.EventHandler(this.resetBtn_Click);
@@ -112,7 +184,7 @@
             this.submitBtn.Location = new System.Drawing.Point(366, 669);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(100, 30);
-            this.submitBtn.TabIndex = 12;
+            this.submitBtn.TabIndex = 8;
             this.submitBtn.Text = "Submit";
             this.submitBtn.UseVisualStyleBackColor = true;
             this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
@@ -130,7 +202,7 @@
             this.departmentCBox.Location = new System.Drawing.Point(66, 293);
             this.departmentCBox.Name = "departmentCBox";
             this.departmentCBox.Size = new System.Drawing.Size(150, 28);
-            this.departmentCBox.TabIndex = 11;
+            this.departmentCBox.TabIndex = 3;
             // 
             // conformPasswordTxt
             // 
@@ -138,7 +210,7 @@
             this.conformPasswordTxt.Location = new System.Drawing.Point(66, 576);
             this.conformPasswordTxt.Name = "conformPasswordTxt";
             this.conformPasswordTxt.Size = new System.Drawing.Size(400, 26);
-            this.conformPasswordTxt.TabIndex = 10;
+            this.conformPasswordTxt.TabIndex = 6;
             // 
             // passwordTxt
             // 
@@ -146,7 +218,7 @@
             this.passwordTxt.Location = new System.Drawing.Point(66, 479);
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.Size = new System.Drawing.Size(400, 26);
-            this.passwordTxt.TabIndex = 9;
+            this.passwordTxt.TabIndex = 5;
             // 
             // emailTxt
             // 
@@ -154,7 +226,7 @@
             this.emailTxt.Location = new System.Drawing.Point(66, 379);
             this.emailTxt.Name = "emailTxt";
             this.emailTxt.Size = new System.Drawing.Size(400, 26);
-            this.emailTxt.TabIndex = 8;
+            this.emailTxt.TabIndex = 4;
             // 
             // rollNumberTxt
             // 
@@ -162,7 +234,7 @@
             this.rollNumberTxt.Location = new System.Drawing.Point(66, 205);
             this.rollNumberTxt.Name = "rollNumberTxt";
             this.rollNumberTxt.Size = new System.Drawing.Size(400, 26);
-            this.rollNumberTxt.TabIndex = 7;
+            this.rollNumberTxt.TabIndex = 2;
             // 
             // nameTxt
             // 
@@ -170,7 +242,7 @@
             this.nameTxt.Location = new System.Drawing.Point(66, 110);
             this.nameTxt.Name = "nameTxt";
             this.nameTxt.Size = new System.Drawing.Size(400, 26);
-            this.nameTxt.TabIndex = 6;
+            this.nameTxt.TabIndex = 1;
             // 
             // label7
             // 
@@ -231,76 +303,6 @@
             this.label2.Size = new System.Drawing.Size(44, 16);
             this.label2.TabIndex = 0;
             this.label2.Text = "Name";
-            // 
-            // nameValidationLabel
-            // 
-            this.nameValidationLabel.AutoSize = true;
-            this.nameValidationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameValidationLabel.ForeColor = System.Drawing.Color.Red;
-            this.nameValidationLabel.Location = new System.Drawing.Point(64, 139);
-            this.nameValidationLabel.Name = "nameValidationLabel";
-            this.nameValidationLabel.Size = new System.Drawing.Size(131, 16);
-            this.nameValidationLabel.TabIndex = 14;
-            this.nameValidationLabel.Text = "Name doesn\'t empty";
-            this.nameValidationLabel.Visible = false;
-            // 
-            // rollNumberValidationLabel
-            // 
-            this.rollNumberValidationLabel.AutoSize = true;
-            this.rollNumberValidationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rollNumberValidationLabel.ForeColor = System.Drawing.Color.Red;
-            this.rollNumberValidationLabel.Location = new System.Drawing.Point(64, 234);
-            this.rollNumberValidationLabel.Name = "rollNumberValidationLabel";
-            this.rollNumberValidationLabel.Size = new System.Drawing.Size(169, 16);
-            this.rollNumberValidationLabel.TabIndex = 15;
-            this.rollNumberValidationLabel.Text = "Roll Number doesn\'t empty";
-            this.rollNumberValidationLabel.Visible = false;
-            // 
-            // departmentValidationLabel
-            // 
-            this.departmentValidationLabel.AutoSize = true;
-            this.departmentValidationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.departmentValidationLabel.ForeColor = System.Drawing.Color.Red;
-            this.departmentValidationLabel.Location = new System.Drawing.Point(64, 324);
-            this.departmentValidationLabel.Name = "departmentValidationLabel";
-            this.departmentValidationLabel.Size = new System.Drawing.Size(327, 16);
-            this.departmentValidationLabel.TabIndex = 16;
-            this.departmentValidationLabel.Text = "Please Select Department. Department doesn\'t empty";
-            this.departmentValidationLabel.Visible = false;
-            // 
-            // emailValidationLabel
-            // 
-            this.emailValidationLabel.AutoSize = true;
-            this.emailValidationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailValidationLabel.ForeColor = System.Drawing.Color.Red;
-            this.emailValidationLabel.Location = new System.Drawing.Point(64, 408);
-            this.emailValidationLabel.Name = "emailValidationLabel";
-            this.emailValidationLabel.Size = new System.Drawing.Size(128, 16);
-            this.emailValidationLabel.TabIndex = 17;
-            this.emailValidationLabel.Text = "Email doesn\'t empty";
-            this.emailValidationLabel.Visible = false;
-            // 
-            // passwordValidationLabel
-            // 
-            this.passwordValidationLabel.AutoSize = true;
-            this.passwordValidationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordValidationLabel.ForeColor = System.Drawing.Color.Red;
-            this.passwordValidationLabel.Location = new System.Drawing.Point(64, 508);
-            this.passwordValidationLabel.Name = "passwordValidationLabel";
-            this.passwordValidationLabel.Size = new System.Drawing.Size(191, 16);
-            this.passwordValidationLabel.TabIndex = 18;
-            this.passwordValidationLabel.Text = "Password must 5 - 20 character";
-            // 
-            // conformPasswordValidationLabel
-            // 
-            this.conformPasswordValidationLabel.AutoSize = true;
-            this.conformPasswordValidationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conformPasswordValidationLabel.ForeColor = System.Drawing.Color.Red;
-            this.conformPasswordValidationLabel.Location = new System.Drawing.Point(64, 605);
-            this.conformPasswordValidationLabel.Name = "conformPasswordValidationLabel";
-            this.conformPasswordValidationLabel.Size = new System.Drawing.Size(153, 16);
-            this.conformPasswordValidationLabel.TabIndex = 19;
-            this.conformPasswordValidationLabel.Text = "Password doesn\'t match";
             // 
             // StudentRegistrationForm
             // 

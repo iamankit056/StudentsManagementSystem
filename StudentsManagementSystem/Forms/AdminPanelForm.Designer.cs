@@ -39,6 +39,7 @@
             this.signOutBtn = new System.Windows.Forms.Button();
             this.addBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.refreshBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.studentsDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -90,7 +91,7 @@
             this.searchTxt.Location = new System.Drawing.Point(516, 29);
             this.searchTxt.Name = "searchTxt";
             this.searchTxt.Size = new System.Drawing.Size(198, 22);
-            this.searchTxt.TabIndex = 2;
+            this.searchTxt.TabIndex = 1;
             // 
             // label2
             // 
@@ -108,6 +109,7 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.Controls.Add(this.refreshBtn);
             this.groupBox2.Controls.Add(this.updateBtn);
             this.groupBox2.Controls.Add(this.deleteBtn);
             this.groupBox2.Controls.Add(this.signOutBtn);
@@ -125,7 +127,7 @@
             this.updateBtn.Location = new System.Drawing.Point(79, 108);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(100, 30);
-            this.updateBtn.TabIndex = 3;
+            this.updateBtn.TabIndex = 4;
             this.updateBtn.Text = "Update";
             this.updateBtn.UseVisualStyleBackColor = true;
             this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
@@ -137,7 +139,7 @@
             this.deleteBtn.Location = new System.Drawing.Point(79, 72);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(100, 30);
-            this.deleteBtn.TabIndex = 2;
+            this.deleteBtn.TabIndex = 3;
             this.deleteBtn.Text = "Delete";
             this.deleteBtn.UseVisualStyleBackColor = true;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
@@ -149,7 +151,7 @@
             this.signOutBtn.Location = new System.Drawing.Point(79, 283);
             this.signOutBtn.Name = "signOutBtn";
             this.signOutBtn.Size = new System.Drawing.Size(100, 30);
-            this.signOutBtn.TabIndex = 1;
+            this.signOutBtn.TabIndex = 6;
             this.signOutBtn.Text = "Sign out";
             this.signOutBtn.UseVisualStyleBackColor = true;
             this.signOutBtn.Click += new System.EventHandler(this.signOutBtn_Click);
@@ -161,7 +163,7 @@
             this.addBtn.Location = new System.Drawing.Point(79, 36);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(100, 30);
-            this.addBtn.TabIndex = 0;
+            this.addBtn.TabIndex = 2;
             this.addBtn.Text = "Add";
             this.addBtn.UseVisualStyleBackColor = true;
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
@@ -175,6 +177,17 @@
             this.label3.Size = new System.Drawing.Size(144, 18);
             this.label3.TabIndex = 4;
             this.label3.Text = "Students Information";
+            // 
+            // refreshBtn
+            // 
+            this.refreshBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refreshBtn.Location = new System.Drawing.Point(79, 144);
+            this.refreshBtn.Name = "refreshBtn";
+            this.refreshBtn.Size = new System.Drawing.Size(100, 30);
+            this.refreshBtn.TabIndex = 5;
+            this.refreshBtn.Text = "Refresh";
+            this.refreshBtn.UseVisualStyleBackColor = true;
             // 
             // AdminPanelForm
             // 
@@ -212,5 +225,6 @@
         private System.Windows.Forms.Button updateBtn;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button refreshBtn;
     }
 }
