@@ -31,15 +31,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.studentsDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.searchBtn = new System.Windows.Forms.Button();
             this.searchTxt = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.refreshBtn = new System.Windows.Forms.Button();
             this.updateBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.signOutBtn = new System.Windows.Forms.Button();
             this.addBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.refreshBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.studentsDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -75,8 +75,8 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.searchBtn);
             this.groupBox1.Controls.Add(this.searchTxt);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -84,25 +84,29 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
+            // searchBtn
+            // 
+            this.searchBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchBtn.BackColor = System.Drawing.Color.Blue;
+            this.searchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBtn.ForeColor = System.Drawing.Color.White;
+            this.searchBtn.Location = new System.Drawing.Point(655, 25);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(100, 25);
+            this.searchBtn.TabIndex = 7;
+            this.searchBtn.Text = "Search";
+            this.searchBtn.UseVisualStyleBackColor = false;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
+            // 
             // searchTxt
             // 
-            this.searchTxt.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.searchTxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.searchTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTxt.Location = new System.Drawing.Point(516, 29);
+            this.searchTxt.Location = new System.Drawing.Point(449, 27);
             this.searchTxt.Name = "searchTxt";
-            this.searchTxt.Size = new System.Drawing.Size(198, 22);
+            this.searchTxt.Size = new System.Drawing.Size(200, 22);
             this.searchTxt.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(462, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "search";
             // 
             // groupBox2
             // 
@@ -119,6 +123,18 @@
             this.groupBox2.Size = new System.Drawing.Size(259, 347);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
+            // 
+            // refreshBtn
+            // 
+            this.refreshBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refreshBtn.Location = new System.Drawing.Point(79, 144);
+            this.refreshBtn.Name = "refreshBtn";
+            this.refreshBtn.Size = new System.Drawing.Size(100, 30);
+            this.refreshBtn.TabIndex = 5;
+            this.refreshBtn.Text = "Refresh";
+            this.refreshBtn.UseVisualStyleBackColor = true;
+            this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
             // 
             // updateBtn
             // 
@@ -147,13 +163,16 @@
             // signOutBtn
             // 
             this.signOutBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.signOutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signOutBtn.BackColor = System.Drawing.Color.Blue;
+            this.signOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signOutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signOutBtn.ForeColor = System.Drawing.Color.White;
             this.signOutBtn.Location = new System.Drawing.Point(79, 283);
             this.signOutBtn.Name = "signOutBtn";
             this.signOutBtn.Size = new System.Drawing.Size(100, 30);
             this.signOutBtn.TabIndex = 6;
             this.signOutBtn.Text = "Sign out";
-            this.signOutBtn.UseVisualStyleBackColor = true;
+            this.signOutBtn.UseVisualStyleBackColor = false;
             this.signOutBtn.Click += new System.EventHandler(this.signOutBtn_Click);
             // 
             // addBtn
@@ -177,17 +196,6 @@
             this.label3.Size = new System.Drawing.Size(144, 18);
             this.label3.TabIndex = 4;
             this.label3.Text = "Students Information";
-            // 
-            // refreshBtn
-            // 
-            this.refreshBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshBtn.Location = new System.Drawing.Point(79, 144);
-            this.refreshBtn.Name = "refreshBtn";
-            this.refreshBtn.Size = new System.Drawing.Size(100, 30);
-            this.refreshBtn.TabIndex = 5;
-            this.refreshBtn.Text = "Refresh";
-            this.refreshBtn.UseVisualStyleBackColor = true;
             // 
             // AdminPanelForm
             // 
@@ -218,7 +226,6 @@
         private System.Windows.Forms.DataGridView studentsDataGridView;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox searchTxt;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button signOutBtn;
         private System.Windows.Forms.Button addBtn;
@@ -226,5 +233,6 @@
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button refreshBtn;
+        private System.Windows.Forms.Button searchBtn;
     }
 }

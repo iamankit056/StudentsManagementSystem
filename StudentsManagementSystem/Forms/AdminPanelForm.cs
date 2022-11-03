@@ -23,6 +23,41 @@ namespace StudentsManagementSystem.Forms
 
         private void AdminPanelForm_Load(object sender, EventArgs e)
         {
+            RefreshStudentTable();
+        }
+
+        private void addBtn_Click(object sender, EventArgs e)
+        {
+            StudentRegistrationForm studentRegistrationForm = new StudentRegistrationForm(mySqlConnection);
+            studentRegistrationForm.ShowDialog();
+            RefreshStudentTable();
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void signOutBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminLoginForm adminLoginForm = new AdminLoginForm();
+            adminLoginForm.ShowDialog();
+            this.Close();
+        }
+
+        private void refreshBtn_Click(object sender, EventArgs e)
+        {
+            RefreshStudentTable();
+        }
+
+        private void RefreshStudentTable()
+        {
             string connectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
             mySqlConnection = new MySqlConnection(connectionString);
             try
@@ -46,28 +81,9 @@ namespace StudentsManagementSystem.Forms
             }
         }
 
-        private void addBtn_Click(object sender, EventArgs e)
-        {
-            StudentRegistrationForm studentRegistrationForm = new StudentRegistrationForm(mySqlConnection);
-            studentRegistrationForm.ShowDialog();
-        }
-
-        private void deleteBtn_Click(object sender, EventArgs e)
+        private void searchBtn_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void updateBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void signOutBtn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            AdminLoginForm adminLoginForm = new AdminLoginForm();
-            adminLoginForm.ShowDialog();
-            this.Close();
         }
     }
 }

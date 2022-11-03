@@ -45,7 +45,7 @@ namespace StudentsManagementSystem.Forms
                     ds.Tables["Students"].Rows.Add(row);
                     mySqlDataAdapter.Update(ds, "Students");
                     MessageBox.Show("Record inserted sucessesfully");
-                    this.Close();
+                    ResetForm();
                 }
                 catch (Exception ex)
                 {
@@ -56,6 +56,11 @@ namespace StudentsManagementSystem.Forms
                     mySqlConnection.Close();
                 }
             }
+        }
+
+        private void resetBtn_Click(object sender, EventArgs e)
+        {
+            ResetForm();
         }
 
         // Validate Registration Form
@@ -96,7 +101,7 @@ namespace StudentsManagementSystem.Forms
             return isErrorOccure;
         }
 
-        private void resetBtn_Click(object sender, EventArgs e)
+        private void ResetForm()
         {
             // clear all input fields
             nameTxt.Text = "";
