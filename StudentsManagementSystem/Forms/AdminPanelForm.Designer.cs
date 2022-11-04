@@ -35,7 +35,6 @@
             this.searchTxt = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.refreshBtn = new System.Windows.Forms.Button();
-            this.updateBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.signOutBtn = new System.Windows.Forms.Button();
             this.addBtn = new System.Windows.Forms.Button();
@@ -114,7 +113,6 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Controls.Add(this.refreshBtn);
-            this.groupBox2.Controls.Add(this.updateBtn);
             this.groupBox2.Controls.Add(this.deleteBtn);
             this.groupBox2.Controls.Add(this.signOutBtn);
             this.groupBox2.Controls.Add(this.addBtn);
@@ -128,25 +126,13 @@
             // 
             this.refreshBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshBtn.Location = new System.Drawing.Point(79, 144);
+            this.refreshBtn.Location = new System.Drawing.Point(79, 108);
             this.refreshBtn.Name = "refreshBtn";
             this.refreshBtn.Size = new System.Drawing.Size(100, 30);
             this.refreshBtn.TabIndex = 5;
             this.refreshBtn.Text = "Refresh";
             this.refreshBtn.UseVisualStyleBackColor = true;
             this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
-            // 
-            // updateBtn
-            // 
-            this.updateBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.updateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateBtn.Location = new System.Drawing.Point(79, 108);
-            this.updateBtn.Name = "updateBtn";
-            this.updateBtn.Size = new System.Drawing.Size(100, 30);
-            this.updateBtn.TabIndex = 4;
-            this.updateBtn.Text = "Update";
-            this.updateBtn.UseVisualStyleBackColor = true;
-            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // deleteBtn
             // 
@@ -229,7 +215,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button signOutBtn;
         private System.Windows.Forms.Button addBtn;
-        private System.Windows.Forms.Button updateBtn;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button refreshBtn;

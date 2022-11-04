@@ -35,12 +35,8 @@ namespace StudentsManagementSystem.Forms
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void updateBtn_Click(object sender, EventArgs e)
-        {
-
+            StudentDelationForm studentDelationForm = new StudentDelationForm();
+            studentDelationForm.ShowDialog();
         }
 
         private void signOutBtn_Click(object sender, EventArgs e)

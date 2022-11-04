@@ -98,13 +98,16 @@
             // 
             // submitBtn
             // 
-            this.submitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitBtn.BackColor = System.Drawing.Color.Blue;
+            this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.submitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitBtn.ForeColor = System.Drawing.Color.White;
             this.submitBtn.Location = new System.Drawing.Point(600, 300);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(100, 30);
             this.submitBtn.TabIndex = 4;
             this.submitBtn.Text = "Sign in";
-            this.submitBtn.UseVisualStyleBackColor = true;
+            this.submitBtn.UseVisualStyleBackColor = false;
             this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // loginValidationMessageLabel

@@ -90,7 +90,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(67, 30);
+            this.panel1.Location = new System.Drawing.Point(17, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(550, 500);
             this.panel1.TabIndex = 1;
@@ -180,13 +180,16 @@
             // 
             // submitBtn
             // 
-            this.submitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitBtn.BackColor = System.Drawing.Color.Blue;
+            this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.submitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitBtn.ForeColor = System.Drawing.Color.White;
             this.submitBtn.Location = new System.Drawing.Point(366, 669);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(100, 30);
             this.submitBtn.TabIndex = 8;
             this.submitBtn.Text = "Submit";
-            this.submitBtn.UseVisualStyleBackColor = true;
+            this.submitBtn.UseVisualStyleBackColor = false;
             this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // departmentCBox
@@ -309,12 +312,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(684, 561);
+            this.ClientSize = new System.Drawing.Size(584, 561);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(700, 600);
+            this.MaximumSize = new System.Drawing.Size(600, 600);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(700, 600);
+            this.MinimumSize = new System.Drawing.Size(600, 600);
             this.Name = "StudentRegistrationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student Registration";
