@@ -35,8 +35,9 @@ namespace StudentsManagementSystem.Forms
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-            StudentDelationForm studentDelationForm = new StudentDelationForm();
+            StudentDelationForm studentDelationForm = new StudentDelationForm(mySqlConnection);
             studentDelationForm.ShowDialog();
+            RefreshStudentTable();
         }
 
         private void signOutBtn_Click(object sender, EventArgs e)
